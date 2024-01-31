@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="styles/styles.css">
     <title>Tunisian Restaurent</title>
 </head>
-<body style="background-color: beige;"> 
+<body style="background-color: #083346;"> 
     <header>
         <div class="logo"><img  class="imglogo" src="img/logo.png" alt="logo"></div>
-        <nav>
-            <a href="#">home</a>
-            <a href="#">about</a>
-            <a href="#">review</a>
-            <a href="#">menu</a>
-            <a href="#">blogs</a>
+        <nav class="nav-links">
+            <a class="Menu" href="#">home</a>
+            <a class="Menu" href="#">about</a>
+            <a class="Menu" href="#">review</a>
+            <a class="Menu" href="#">menu</a>
+            <a class="Menu" href="#">blogs</a>
         </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+
         <a href="#" class="btn">contact</a>        
     </header>
     <section class="home">
@@ -28,7 +30,7 @@
             <a href="#" class="btn">order now</a>
             <!-- box icon social media -->
             <div class="social-link">
-                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a  href="#"><i class='bx bxl-twitter'></i></a>
                 <a href="#"><i class='bx bxl-facebook'></i> </a>
                 <a href=""> <i class='bx bxl-instagram'></i> </a>
                 <a href="#"> <i class='bx bxl-github'></i></a>
@@ -38,6 +40,14 @@
             <img src="img/couscous.png" alt="Couscous Tunisian">
         </div>
     </section>
-    
+    <script>
+        function toggleMenu() {
+            var secthome = document.querySelector('section');
+            var navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = (navLinks.style.display === 'none' || navLinks.style.display === '') ? 'flex' : 'none';
+            secthome.style.display= (navLinks.style.display === 'flex')?'none':'flex';
+
+        }
+    </script>
 </body>
 </html>
